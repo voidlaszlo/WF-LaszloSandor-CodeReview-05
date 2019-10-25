@@ -2,7 +2,7 @@ let data = [
     {
         "id" : "1",
         "name" : "Jenny",
-        "age" : "23",
+        "age" : "21",
         "gender" : "female",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
@@ -13,9 +13,9 @@ let data = [
     },
     {
         "id" : "2",
-        "name" : "Jenny",
-        "age" : "23",
-        "gender" : "female",
+        "name" : "Thomas",
+        "age" : "29",
+        "gender" : "male",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
@@ -25,9 +25,9 @@ let data = [
     },
     {
         "id" : "3",
-        "name" : "Jenny",
-        "age" : "23",
-        "gender" : "female",
+        "name" : "Stefan",
+        "age" : "18",
+        "gender" : "male",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
@@ -37,8 +37,8 @@ let data = [
     },
     {
         "id" : "4",
-        "name" : "Jenny",
-        "age" : "23",
+        "name" : "Erika",
+        "age" : "34",
         "gender" : "female",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
@@ -49,8 +49,8 @@ let data = [
     },
     {
         "id" : "5",
-        "name" : "Jenny",
-        "age" : "23",
+        "name" : "Laura",
+        "age" : "33",
         "gender" : "female",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
@@ -61,9 +61,9 @@ let data = [
     },
     {
         "id" : "6",
-        "name" : "Jenny",
-        "age" : "23",
-        "gender" : "female",
+        "name" : "Mike",
+        "age" : "27",
+        "gender" : "male",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
@@ -73,9 +73,9 @@ let data = [
     },
     {
         "id" : "7",
-        "name" : "Jenny",
-        "age" : "23",
-        "gender" : "female",
+        "name" : "Benny",
+        "age" : "37",
+        "gender" : "male",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
@@ -85,7 +85,7 @@ let data = [
     },
     {
         "id" : "8",
-        "name" : "Jenny",
+        "name" : "Jessica",
         "age" : "23",
         "gender" : "female",
         "location" : "Vienna",
@@ -97,8 +97,8 @@ let data = [
     },
     {
         "id" : "9",
-        "name" : "Jenny",
-        "age" : "23",
+        "name" : "Dorothea",
+        "age" : "27",
         "gender" : "female",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
@@ -109,8 +109,8 @@ let data = [
     },
     {
         "id" : "10",
-        "name" : "Jenny",
-        "age" : "23",
+        "name" : "Vivien",
+        "age" : "19",
         "gender" : "female",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
@@ -121,9 +121,9 @@ let data = [
     },
     {
         "id" : "11",
-        "name" : "Jenny",
-        "age" : "23",
-        "gender" : "female",
+        "name" : "Vinzenz",
+        "age" : "20",
+        "gender" : "male",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
@@ -133,9 +133,9 @@ let data = [
     },
     {
         "id" : "12",
-        "name" : "Jenny",
-        "age" : "23",
-        "gender" : "female",
+        "name" : "Said",
+        "age" : "29",
+        "gender" : "male",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
@@ -145,8 +145,8 @@ let data = [
     },
     {
         "id" : "13",
-        "name" : "Jenny",
-        "age" : "23",
+        "name" : "Ulrike",
+        "age" : "31",
         "gender" : "female",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
@@ -157,9 +157,9 @@ let data = [
     },
     {
         "id" : "14",
-        "name" : "Jenny",
-        "age" : "23",
-        "gender" : "female",
+        "name" : "Haris",
+        "age" : "32",
+        "gender" : "male",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
@@ -169,9 +169,9 @@ let data = [
     },
     {
         "id" : "15",
-        "name" : "Jenny",
-        "age" : "23",
-        "gender" : "female",
+        "name" : "Sebastien",
+        "age" : "38",
+        "gender" : "male",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
@@ -181,8 +181,8 @@ let data = [
     },
     {
         "id" : "16",
-        "name" : "Jenny",
-        "age" : "23",
+        "name" : "Monica",
+        "age" : "36",
         "gender" : "female",
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
@@ -199,14 +199,16 @@ let containerFav = document.getElementById('container-favorites')
 init()
 
 function init() {
-    displayPeople()
+    displayPeople(data)
     displayFav()
     favToggle()
+    filterPeople(data)
+    searchPeople(data)
 }
 
-function displayPeople() {
+function displayPeople(arr) {
     containerPeople.innerHTML = ""
-    for(let person of data) {
+    for(let person of arr) {
         containerPeople.innerHTML +=
         `
         <div class="col-lg-3 col-md-6 mb-3">
@@ -215,7 +217,7 @@ function displayPeople() {
                     <div class="card-body">
                         <h5 class="card-title">${person.name}</h5>
                         <p class="card-text">${person.text}</p>
-                        <button class="btn btn-primary">&hearts;</button>
+                        <button class="${person.isFav === "true" ? "btn btn-primary active" : "btn btn-primary"}">&hearts;</button>
                     </div>
             </div>
         </div>
@@ -237,7 +239,7 @@ function displayFav() {
                         <p class="card-text mt-0"><i class="fa fa-map-marker"></i> ${person.location}</p>
                         <p class="card-text">My hobbies are ${person.hobbies[0]}, ${person.hobbies[1]}, ${person.hobbies[2]}.</p>
                         <p class="card-text text-right mb-0 pb-0"><i class="fa fa-music"></i> ${person.favmusic}</p>
-                        <a href="#" class="btn btn-primary">&cross;</a>
+                        <a href="#" class="btn btn-primary" style="background-color : red;border-color:darkred">&cross;</a>
                     </div>
                 </div>
             </div>
@@ -268,3 +270,28 @@ function favToggle() {
     })
 }
 
+function filterPeople(arr) {
+    let btn = document.getElementById('filterBtn')
+    btn.children[0].addEventListener('click', e => {
+        arr.sort((a, b) => parseInt(a.age) - parseInt(b.age))
+        displayPeople(arr)
+    })
+    btn.children[1].addEventListener('click', e => {
+        let newArr = arr.filter(x => x.gender === "female")
+        displayPeople(newArr)
+    })
+    btn.children[2].addEventListener('click', e => {
+        let newArr = arr.filter(x => x.gender === "male")
+        displayPeople(newArr)
+    })
+}
+
+function searchPeople(arr) {
+    let btn = document.getElementById('searchBtn')
+    let input = document.getElementById('searchInput')
+    let newArr = []
+    btn.addEventListener('click', e => {
+        newArr = arr.filter(x => x.name.toLowerCase().startsWith(input.value.toLowerCase()))
+        displayPeople(newArr)
+    })
+}

@@ -26,4 +26,10 @@ img {
   background-color: red;
   border-color: darkred;
 }
+
+footer {
+  background-color: #eee;
+  padding: 1em;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

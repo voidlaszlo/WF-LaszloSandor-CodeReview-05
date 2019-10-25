@@ -33,9 +33,19 @@
                 <a class="nav-link" href="#">Settings</a>
             </li>
         </ul>
+        <div class="dropdown mr-1">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filter
+          </button>
+          <div class="dropdown-menu" id="filterBtn" aria-labelledby="dropdownMenuButton">
+            <button class="dropdown-item">Age</button>
+            <button class="dropdown-item" href="#">Woman</button>
+            <button class="dropdown-item" href="#">Man</button>
+          </div>
+        </div>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
     </nav>
@@ -52,6 +62,10 @@
     <main class="container justify-content-center">
         <div class="row"  id="container-favorites"></div>
     </main>
+
+    <footer>
+      <p>made with &hearts; | <a href="https://github.com/voidlaszlo">GitHub.com</a></p>
+    </footer>
     
 <script src="./assets/app/app.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
