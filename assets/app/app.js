@@ -7,7 +7,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img1.jpg",
+        "imgurl" : "./assets/img/img.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -31,7 +31,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img3.jpg",
+        "imgurl" : "./assets/img/img2.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -43,7 +43,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img4.jpg",
+        "imgurl" : "./assets/img/img.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -55,7 +55,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img5.jpg",
+        "imgurl" : "./assets/img/img.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -67,7 +67,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img6.jpg",
+        "imgurl" : "./assets/img/img2.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -79,7 +79,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img7.jpg",
+        "imgurl" : "./assets/img/img2.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -91,7 +91,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img8.jpg",
+        "imgurl" : "./assets/img/img.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -103,7 +103,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img9.jpg",
+        "imgurl" : "./assets/img/img.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -115,7 +115,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img10.jpg",
+        "imgurl" : "./assets/img/img.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -127,7 +127,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img11.jpg",
+        "imgurl" : "./assets/img/img2.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -139,7 +139,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img12.jpg",
+        "imgurl" : "./assets/img/img2.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -151,7 +151,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img13.jpg",
+        "imgurl" : "./assets/img/img.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -163,7 +163,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img14.jpg",
+        "imgurl" : "./assets/img/img2.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -175,7 +175,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img15.jpg",
+        "imgurl" : "./assets/img/img2.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -187,7 +187,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/img16.jpg",
+        "imgurl" : "./assets/img/img.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -215,7 +215,7 @@ function displayPeople(arr) {
         `
         <div class="col-lg-3 col-md-6 mb-3">
             <div class="card" style="width: 100%;" id="${person.id}">
-                <img draggable="false" src="./assets/img/img.jpg" class="card-img-top" alt="pic">
+                <img draggable="false" src="${person.imgurl}" class="card-img-top" alt="pic">
                     <div class="card-body">
                         <h5 class="card-title">${person.name}</h5>
                         <p class="card-text">${person.text}</p>
@@ -235,7 +235,7 @@ function displayFav() {
             `
             <div class="col-lg-6 col-md-6 mb-4">
                 <div class="card" style="width: 100%;" id="${person.id}">
-                    <img src="./assets/img/img.jpg" class="card-img-top" alt="pic">
+                    <img src="${person.imgurl}" class="card-img-top" alt="pic">
                     <div class="card-body">
                         <h5 class="card-title mb-0">${person.name}, <small style="color:grey">${person.age}</small></h5>
                         <p class="card-text mt-0"><i class="fa fa-map-marker"></i> ${person.location}</p>
@@ -255,7 +255,6 @@ function displayFav() {
 function favToggle() {
     containerPeople.addEventListener('click', e => {
         if(e.target.innerText === "♥") {
-            console.log(e.target.parentNode.parentNode.id)
             e.target.classList.toggle("active")
             data[parseInt(e.target.parentNode.parentNode.id) - 1].isFav === "false" ? data[parseInt(e.target.parentNode.parentNode.id) - 1].isFav = "true" : data[parseInt(e.target.parentNode.parentNode.id) - 1].isFav = "false"
         }
@@ -277,14 +276,17 @@ function filterPeople(arr) {
     btn.children[0].addEventListener('click', e => {
         arr.sort((a, b) => parseInt(a.age) - parseInt(b.age))
         displayPeople(arr)
+        dragDrop()
     })
     btn.children[1].addEventListener('click', e => {
         let newArr = arr.filter(x => x.gender === "female")
         displayPeople(newArr)
+        dragDrop()
     })
     btn.children[2].addEventListener('click', e => {
         let newArr = arr.filter(x => x.gender === "male")
         displayPeople(newArr)
+        dragDrop()
     })
 }
 
@@ -295,6 +297,8 @@ function searchPeople(arr) {
     btn.addEventListener('click', e => {
         newArr = arr.filter(x => x.name.toLowerCase().startsWith(input.value.toLowerCase()))
         displayPeople(newArr)
+        e.preventDefault()
+        dragDrop()
     })
 }
 
@@ -306,12 +310,10 @@ function dragDrop() {
         img.addEventListener('mousedown', e => {
             start = e.target
             start.parentNode.parentNode.style.opacity = "0.5"
-            console.log(start.parentNode.parentNode.innerHTML)
         })
         
         img.addEventListener('mouseup', e => {
             end = e.target
-            console.log(end)
             start.parentNode.parentNode.style.opacity = "1"
             endcontent = e.target.parentNode.parentNode.innerHTML
             end.parentNode.parentNode.innerHTML = start.parentNode.parentNode.innerHTML
