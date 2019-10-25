@@ -7,7 +7,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img1.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -19,7 +19,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img2.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -31,7 +31,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img3.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -43,7 +43,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img4.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -55,7 +55,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img5.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -67,7 +67,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img6.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -79,7 +79,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img7.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -91,7 +91,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img8.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -103,7 +103,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img9.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -115,7 +115,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img10.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -127,7 +127,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img11.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -139,7 +139,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img12.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -151,7 +151,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img13.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -163,7 +163,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img14.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -175,7 +175,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img15.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -187,7 +187,7 @@ let data = [
         "location" : "Vienna",
         "hobbies" : ["skiing", "eating", "music"],
         "favmusic" : "Enya",
-        "imgurl" : "./assets/img/test.jpg",
+        "imgurl" : "./assets/img/img16.jpg",
         "text" : "Hello World?",
         "isFav" : "false"
     },
@@ -195,6 +195,7 @@ let data = [
 
 let containerPeople = document.getElementById('container-people')
 let containerFav = document.getElementById('container-favorites')
+let images = document.querySelectorAll('.card-img-top')
 
 init()
 
@@ -204,6 +205,7 @@ function init() {
     favToggle()
     filterPeople(data)
     searchPeople(data)
+    dragDrop()
 }
 
 function displayPeople(arr) {
@@ -213,7 +215,7 @@ function displayPeople(arr) {
         `
         <div class="col-lg-3 col-md-6 mb-3">
             <div class="card" style="width: 100%;" id="${person.id}">
-                <img src="${person.imgurl}" class="card-img-top" alt="pic">
+                <img draggable="false" src="./assets/img/img.jpg" class="card-img-top" alt="pic">
                     <div class="card-body">
                         <h5 class="card-title">${person.name}</h5>
                         <p class="card-text">${person.text}</p>
@@ -233,7 +235,7 @@ function displayFav() {
             `
             <div class="col-lg-6 col-md-6 mb-4">
                 <div class="card" style="width: 100%;" id="${person.id}">
-                    <img src="${person.imgurl}" class="card-img-top" alt="pic">
+                    <img src="./assets/img/img.jpg" class="card-img-top" alt="pic">
                     <div class="card-body">
                         <h5 class="card-title mb-0">${person.name}, <small style="color:grey">${person.age}</small></h5>
                         <p class="card-text mt-0"><i class="fa fa-map-marker"></i> ${person.location}</p>
@@ -294,4 +296,30 @@ function searchPeople(arr) {
         newArr = arr.filter(x => x.name.toLowerCase().startsWith(input.value.toLowerCase()))
         displayPeople(newArr)
     })
+}
+
+function dragDrop() {
+    let start
+    let end
+    images = document.querySelectorAll(".card-img-top")
+    for(let img of images) {
+        img.addEventListener('mousedown', e => {
+            start = e.target
+            start.parentNode.parentNode.style.opacity = "0.5"
+            console.log(start.parentNode.parentNode.innerHTML)
+        })
+        
+        img.addEventListener('mouseup', e => {
+            end = e.target
+            console.log(end)
+            start.parentNode.parentNode.style.opacity = "1"
+            endcontent = e.target.parentNode.parentNode.innerHTML
+            end.parentNode.parentNode.innerHTML = start.parentNode.parentNode.innerHTML
+            start.parentNode.parentNode.innerHTML = endcontent
+            dragDrop()
+        })
+    }
+    imgs = document.querySelectorAll(".card-img-top")
+    start = undefined
+    end = undefined
 }
