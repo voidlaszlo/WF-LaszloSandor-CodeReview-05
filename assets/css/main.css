@@ -12,8 +12,8 @@ img {
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .btn-primary {
