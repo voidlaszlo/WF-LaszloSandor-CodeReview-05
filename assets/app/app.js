@@ -196,6 +196,7 @@ let data = [
 let containerPeople = document.getElementById('container-people')
 let containerFav = document.getElementById('container-favorites')
 let images = document.querySelectorAll('.card-img-top')
+let count = 23
 
 init()
 
@@ -206,6 +207,7 @@ function init() {
     filterPeople(data)
     searchPeople(data)
     dragDrop()
+    progressBar()
 }
 
 function displayPeople(arr) {
@@ -257,6 +259,8 @@ function favToggle() {
         if(e.target.innerText === "♥") {
             e.target.classList.toggle("active")
             data[parseInt(e.target.parentNode.parentNode.id) - 1].isFav === "false" ? data[parseInt(e.target.parentNode.parentNode.id) - 1].isFav = "true" : data[parseInt(e.target.parentNode.parentNode.id) - 1].isFav = "false"
+            count++
+            progressBar()
         }
         displayFav()
     })
@@ -324,4 +328,12 @@ function dragDrop() {
     imgs = document.querySelectorAll(".card-img-top")
     start = undefined
     end = undefined
+}
+
+
+function progressBar() {
+    let pbar = document.querySelector('.progress-bar')
+    pbar.style.width = `${count}%`
+    console.log(pbar.setAttribute('aria-valuenow', count))
+    pbar.innerText = count
 }
